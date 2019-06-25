@@ -237,7 +237,7 @@ form .answer input[type="radio"]
   flex-direction: row;
   justify-content: space-around;
   height: 100%;
-  width: 1500px;
+  width: 100%;
   align-items: center;
   vertical-align: middle;
 }
