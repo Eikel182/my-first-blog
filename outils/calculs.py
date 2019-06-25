@@ -9,7 +9,6 @@ import os
 import stl
 import matplotlib.pyplot as plt
 import numpy as np
-from stl import mesh
 from mpl_toolkits import mplot3d
 from .models import Prototype, Material_proto, Material_support, Result, Printer, Level
 from shapely.geometry import Polygon
@@ -347,7 +346,7 @@ def rotation(vector):
 def common_calculations(alpha, file):
 
     name = os.path.splitext(os.path.basename(file))[0]
-    obj = mesh.Mesh.from_file(file)
+    obj = stl.Mesh.from_file(file)
     proj = plans_projection(obj)
     data_ele = val_elements(obj, proj)
     vol_stl = volume_stl(obj)/1000
